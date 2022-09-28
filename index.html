@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calendar App</title>
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 	<style type="text/css">
+ 		#table {
+ 			width:  90%;
+ 			margin:  0 auto;
+ 			text-align:  center;
+ 		}
+
+ 		.row {
+ 			justify-content:  center;
+ 		}
+
+ 		input {
+ 			width:  100%;
+ 		}
+
+ 		.col-1 {
+ 			min-width: 10%;
+ 		}
+
+ 		.col-2 {
+ 			min-width: 20%;
+ 		}
+
+ 		.block {
+ 			text-align:  right;
+ 		}
+
+ 		#submitContainer {
+ 			display: flex;
+ 			justify-content:  center;
+ 			align-items:  center;
+
+ 		}
+ 	</style>
+
+</head>
+<body>
+	<br>
+	<h1 style="text-align: center">Hi, put your subjects here!</h1>
+	<br>
+	<div id="table">
+		<div class="row rowHead">
+			<div class="col-2 day1"></div>
+			<div class="col-1 day1">Day 1</div>
+			<div class="col-1 day2">Day 2</div>
+			<div class="col-1 day3">Day 3</div>
+			<div class="col-1 day4">Day 4</div>
+			<div class="col-1 day5">Day 5</div>
+			<div class="col-1 day6">Day 6</div>
+			<div class="col-1 day7">Day 7</div>
+			<div class="col-1 day8">Day 8</div>
+		</div>
+		<div class="row row1">
+			<div class="col-2 block"><p>Block 1 (8:00-8:55)</p></div>
+			<div class="col-1 day1"><input type="text" name="class" value="Italian"></div>
+			<div class="col-1 day2"><input type="text" name="class" value="English"></div>
+			<div class="col-1 day3"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day4"><input type="text" name="class" value="Math"></div>
+			<div class="col-1 day5"><input type="text" name="class" value=""></div>
+			<div class="col-1 day6"><input type="text" name="class" value="History"></div>
+			<div class="col-1 day7"><input type="text" name="class" value="GloPo"></div>
+			<div class="col-1 day8"><input type="text" name="class" value=""></div>
+		</div>
+		<div class="row row2">
+			<div class="col-2 block"><p>Block 2 (9:00-9:55)</p></div>
+			<div class="col-1 day1"><input type="text" name="class" value="TOK"></div>
+			<div class="col-1 day2"><input type="text" name="class" value="History"></div>
+			<div class="col-1 day3"><input type="text" name="class" value="GloPo"></div>
+			<div class="col-1 day4"><input type="text" name="class" value=""></div>
+			<div class="col-1 day5"><input type="text" name="class" value="Italian"></div>
+			<div class="col-1 day6"><input type="text" name="class" value="English"></div>
+			<div class="col-1 day7"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day8"><input type="text" name="class" value="Math"></div>
+		</div>
+		<div class="row row3">
+			<div class="col-2 block"><p>Block 3 (10:00-10:55)</p></div>
+			<div class="col-1 day1"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day2"><input type="text" name="class" value="Math"></div>
+			<div class="col-1 day3"><input type="text" name="class" value="TOK"></div>
+			<div class="col-1 day4"><input type="text" name="class" value="History"></div>
+			<div class="col-1 day5"><input type="text" name="class" value="GloPo"></div>
+			<div class="col-1 day6"><input type="text" name="class" value=""></div>
+			<div class="col-1 day7"><input type="text" name="class" value="Italian"></div>
+			<div class="col-1 day8"><input type="text" name="class" value="English"></div>
+		</div>
+		<div class="row row4">
+			<div class="col-2 block"><p>Block 4 (11:20-12:15)</p></div>
+			<div class="col-1 day1"><input type="text" name="class" value="History"></div>
+			<div class="col-1 day2"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day3"><input type="text" name="class" value="Math"></div>
+			<div class="col-1 day4"><input type="text" name="class" value=""></div>
+			<div class="col-1 day5"><input type="text" name="class" value="History"></div>
+			<div class="col-1 day6"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day7"><input type="text" name="class" value="Math"></div>
+			<div class="col-1 day8"><input type="text" name="class" value=""></div>
+		</div>
+		<div class="row row5">
+			<div class="col-2 block"><p>Block 5 (12:20-13:45)</p></div>
+			<div class="col-1 day1"><input type="text" name="class" value="GloPo"></div>
+			<div class="col-1 day2"><input type="text" name="class" value=""></div>
+			<div class="col-1 day3"><input type="text" name="class" value="Italian"></div>
+			<div class="col-1 day4"><input type="text" name="class" value="English"></div>
+			<div class="col-1 day5"><input type="text" name="class" value="Physics"></div>
+			<div class="col-1 day6"><input type="text" name="class" value="Math"></div>
+			<div class="col-1 day7"><input type="text" name="class" value="TOK"></div>
+			<div class="col-1 day8"><input type="text" name="class" value="History"></div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div id="submitContainer"><button id="submit">Download your File</button></div>
+	<br>
+	<div style="text-align: center"><p>Let Red (+39 351 9782348) know if there are any problems :)</p></div>
+</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		let daycycledays = ["8/30/2022","8/31/2022","9/1/2022","9/2/2022","9/5/2022","9/6/2022","9/7/2022","9/8/2022","9/9/2022","9/12/2022","9/13/2022","9/14/2022","9/15/2022","9/16/2022","9/19/2022","9/20/2022","9/22/2022","9/23/2022","9/26/2022","9/27/2022","9/28/2022","9/29/2022","9/30/2022","10/3/2022","10/4/2022","10/5/2022","10/6/2022","10/7/2022","10/10/2022","10/11/2022","10/12/2022","10/13/2022","10/14/2022","10/17/2022","10/18/2022","10/19/2022","10/20/2022","10/21/2022","10/24/2022","10/26/2022","10/27/2022","10/28/2022","11/2/2022","11/3/2022","11/4/2022","11/7/2022","11/8/2022","11/9/2022","11/10/2022","11/11/2022","11/14/2022","11/15/2022","11/17/2022","11/18/2022","11/21/2022","11/22/2022","11/23/2022","11/24/2022","11/25/2022","11/28/2022","11/29/2022","11/30/2022","12/1/2022","12/2/2022","12/5/2022","12/6/2022","12/7/2022","12/8/2022","12/9/2022","12/12/2022","12/13/2022","12/14/2022","12/15/2022"];
+		let starts = ['8:00','9:00','10:00','11:20','12:20'];
+		let ends = ['8:55','9:55','10:55','12:15','13:45'];
+		let header = ['Subject', 'Start Date', 'Start Time', 'End Date', 'End Time', 'All Day Event', 'Location'];
+		let csv = header.join(',') + '\n';
+		let blockList = ['G', 'C', 'A', 'D', 'E', 'H', 'D', 'B', 'A', 'F'];
+		let block = {}
+
+		document.querySelector('#submit').addEventListener('click', function(){
+			let subjs = [];
+			for(let i = 1; i <= 8; i++){
+				for(let j = 1; j <= 5; j++){
+					let query = '.row' + j + ' .day' + i + ' input'
+					subjs.push(document.querySelector(query).value)
+				}
+			}
+
+			for(let i = 0; i < 10; i++){
+				block[subjs[i]] = blockList[i]
+			}
+
+			let count = 1;
+			for(let i = 0; i < daycycledays.length; i++){
+				if(count == 9){
+					count = 1;
+				}
+
+				for(let subjcount = 0; subjcount < 5; subjcount++){
+					if(!subjs[(count - 1) * 5 + subjcount] == ""){
+						subjs_ind = (count - 1)*5 + subjcount;
+						subj = subjs[subjs_ind] + ' [' + block[subjs[subjs_ind]] + ']';
+						csv += [subj, daycycledays[i], starts[subjcount], daycycledays[i], ends[subjcount], false, ''].join(',');
+						csv += '\n';
+
+					}
+				}
+				count++;
+			}
+
+			// document.write(csv)
+
+			var hiddenElement = document.createElement('a');
+		    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+		    hiddenElement.target = '_blank';
+		    
+		    hiddenElement.download = 'calendarTest.csv';
+		    hiddenElement.click();
+		})
+	</script>
+
+</html>
