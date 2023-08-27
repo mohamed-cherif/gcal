@@ -6,59 +6,38 @@
 	<title>Calendar App</title>
  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
  	<style type="text/css">
- 		#table {
+ 		.table {
  			width:  90%;
  			margin:  0 auto;
  			text-align:  center;
  		}
-
  		.row {
  			justify-content:  center;
  		}
-
+ 		.rowHead {
+ 			margin: 1em;
+ 		}
  		input {
  			width:  100%;
  		}
-
  		.col-1 {
  			min-width: 10%;
+ 			overflow: clip;
  		}
-
  		.col-2 {
  			min-width: 20%;
  		}
-
  		.block {
- 			text-align:  right;
+ 			text-align:  left;
  		}
-
  		#submitContainer {
  			display: flex;
  			justify-content:  center;
  			align-items:  center;
-
  		}
 
- 		input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-		    color:    #ddd;
-		}
-		input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-		   color:    #ddd;
-		   opacity:  1;
-		}
-		input::-moz-placeholder { /* Mozilla Firefox 19+ */
-		   color:    #ddd;
-		   opacity:  1;
-		}
-		input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		   color:    #ddd;
-		}
-		input::-ms-input-placeholder { /* Microsoft Edge */
-		   color:    #ddd;
-		}
-
-		input::placeholder { /* Most modern browsers support this now. */
-		   color:    #ddd;
+		input:disabled {
+			color: #000;	
 		}
  	</style>
 
@@ -67,73 +46,72 @@
 	<br>
 	<h1 style="text-align: center">Hi, put your subjects here!</h1>
 	<div style="text-align: center"><p>The placeholder subjects there are mine as an example :)</p></div>
-	<br>
-	<div id="table">
+	<div class="table" id="timetable">
 		<div class="row rowHead">
-			<div class="col-2 day1"></div>
-			<div class="col-1 day1">Day 1</div>
-			<div class="col-1 day2">Day 2</div>
-			<div class="col-1 day3">Day 3</div>
-			<div class="col-1 day4">Day 4</div>
-			<div class="col-1 day5">Day 5</div>
-			<div class="col-1 day6">Day 6</div>
-			<div class="col-1 day7">Day 7</div>
-			<div class="col-1 day8">Day 8</div>
+			<div class="col-2"></div>
+			<div class="col-1">Day 1</div>
+			<div class="col-1">Day 2</div>
+			<div class="col-1">Day 3</div>
+			<div class="col-1">Day 4</div>
+			<div class="col-1">Day 5</div>
+			<div class="col-1">Day 6</div>
+			<div class="col-1">Day 7</div>
+			<div class="col-1">Day 8</div>
 		</div>
 		<div class="row row1">
 			<div class="col-2 block"><p>Block 1 (8:00-8:55)</p></div>
-			<div class="col-1 day1"><input type="text" name="class" placeholder="Italian"></div>
-			<div class="col-1 day2"><input type="text" name="class" placeholder="English"></div>
-			<div class="col-1 day3"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day4"><input type="text" name="class" placeholder="Math"></div>
-			<div class="col-1 day5"><input type="text" name="class" placeholder=""></div>
-			<div class="col-1 day6"><input type="text" name="class" placeholder="History"></div>
-			<div class="col-1 day7"><input type="text" name="class" placeholder="GloPo"></div>
-			<div class="col-1 day8"><input type="text" name="class" placeholder=""></div>
+			<div class="col-1 day1"><input placeholder="English"></div>
+			<div class="col-1 day2"><input placeholder=""></div>
+			<div class="col-1 day3"><input placeholder="Math"></div>
+			<div class="col-1 day4"><input placeholder="Biology"></div>
+			<div class="col-1 day5"><input placeholder="Italian"></div>
+			<div class="col-1 day6"><input placeholder="Physics"></div>
+			<div class="col-1 day7"><input placeholder=""></div>
+			<div class="col-1 day8"><input placeholder="WAC"></div>
 		</div>
 		<div class="row row2">
 			<div class="col-2 block"><p>Block 2 (9:00-9:55)</p></div>
-			<div class="col-1 day1"><input type="text" name="class" placeholder="TOK"></div>
-			<div class="col-1 day2"><input type="text" name="class" placeholder="History"></div>
-			<div class="col-1 day3"><input type="text" name="class" placeholder="GloPo"></div>
-			<div class="col-1 day4"><input type="text" name="class" placeholder=""></div>
-			<div class="col-1 day5"><input type="text" name="class" placeholder="Italian"></div>
-			<div class="col-1 day6"><input type="text" name="class" placeholder="English"></div>
-			<div class="col-1 day7"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day8"><input type="text" name="class" placeholder="Math"></div>
+			<div class="col-1 day1"><input placeholder="Italian"></div>
+			<div class="col-1 day2"><input placeholder="Physics"></div>
+			<div class="col-1 day3"><input placeholder=""></div>
+			<div class="col-1 day4"><input placeholder="WAC"></div>
+			<div class="col-1 day5"><input placeholder="English"></div>
+			<div class="col-1 day6"><input placeholder="TOK"></div>
+			<div class="col-1 day7"><input placeholder="Math"></div>
+			<div class="col-1 day8"><input placeholder="Biology"></div>
 		</div>
 		<div class="row row3">
 			<div class="col-2 block"><p>Block 3 (10:00-10:55)</p></div>
-			<div class="col-1 day1"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day2"><input type="text" name="class" placeholder="Math"></div>
-			<div class="col-1 day3"><input type="text" name="class" placeholder="TOK"></div>
-			<div class="col-1 day4"><input type="text" name="class" placeholder="History"></div>
-			<div class="col-1 day5"><input type="text" name="class" placeholder="GloPo"></div>
-			<div class="col-1 day6"><input type="text" name="class" placeholder=""></div>
-			<div class="col-1 day7"><input type="text" name="class" placeholder="Italian"></div>
-			<div class="col-1 day8"><input type="text" name="class" placeholder="English"></div>
+			<div class="col-1 day1"><input placeholder="Math"></div>
+			<div class="col-1 day2"><input placeholder="Biology"></div>
+			<div class="col-1 day3"><input placeholder="Italian"></div>
+			<div class="col-1 day4"><input placeholder="Physics"></div>
+			<div class="col-1 day5"><input placeholder=""></div>
+			<div class="col-1 day6"><input placeholder="WAC"></div>
+			<div class="col-1 day7"><input placeholder="English"></div>
+			<div class="col-1 day8"><input placeholder="TOK"></div>
 		</div>
 		<div class="row row4">
 			<div class="col-2 block"><p>Block 4 (11:20-12:15)</p></div>
-			<div class="col-1 day1"><input type="text" name="class" placeholder="History"></div>
-			<div class="col-1 day2"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day3"><input type="text" name="class" placeholder="Math"></div>
-			<div class="col-1 day4"><input type="text" name="class" placeholder=""></div>
-			<div class="col-1 day5"><input type="text" name="class" placeholder="History"></div>
-			<div class="col-1 day6"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day7"><input type="text" name="class" placeholder="Math"></div>
-			<div class="col-1 day8"><input type="text" name="class" placeholder=""></div>
+			<div class="col-1 day1"><input placeholder="Physics"></div>
+			<div class="col-1 day2"><input placeholder="Math"></div>
+			<div class="col-1 day3"><input placeholder="Biology"></div>
+			<div class="col-1 day4"><input placeholder="Italian"></div>
+			<div class="col-1 day5"><input placeholder="Physics"></div>
+			<div class="col-1 day6"><input placeholder="Math"></div>
+			<div class="col-1 day7"><input placeholder="Biology"></div>
+			<div class="col-1 day8"><input placeholder="Italian"></div>
 		</div>
 		<div class="row row5">
 			<div class="col-2 block"><p>Block 5 (12:20-13:45)</p></div>
-			<div class="col-1 day1"><input type="text" name="class" placeholder="GloPo"></div>
-			<div class="col-1 day2"><input type="text" name="class" placeholder=""></div>
-			<div class="col-1 day3"><input type="text" name="class" placeholder="Italian"></div>
-			<div class="col-1 day4"><input type="text" name="class" placeholder="English"></div>
-			<div class="col-1 day5"><input type="text" name="class" placeholder="Physics"></div>
-			<div class="col-1 day6"><input type="text" name="class" placeholder="Math"></div>
-			<div class="col-1 day7"><input type="text" name="class" placeholder="TOK"></div>
-			<div class="col-1 day8"><input type="text" name="class" placeholder="History"></div>
+			<div class="col-1 day1"><input placeholder=""></div>
+			<div class="col-1 day2"><input placeholder="WAC"></div>
+			<div class="col-1 day3"><input placeholder="English"></div>
+			<div class="col-1 day4"><input placeholder="TOK"></div>
+			<div class="col-1 day5"><input placeholder="Math"></div>
+			<div class="col-1 day6"><input placeholder="Biology"></div>
+			<div class="col-1 day7"><input placeholder="Italian"></div>
+			<div class="col-1 day8"><input placeholder="Physics"></div>
 		</div>
 	</div>
 	<br>
@@ -151,19 +129,21 @@
 		</ol>
 	</div>
 		<br>
-		<div style="text-align: center"><p><b>For secondi: Don't forget to remove classes during trials!</b></p></div>
+		<!-- <div style="text-align: center"><p><b>For secondi: Don't forget to remove classes during trials!</b></p></div> -->
 		<div style="text-align: center"><p>The app is now updated till the end of term!</p></div>
-	<div style="text-align: center"><p>Let Red (+39 351 9782348) know if there are any problems :)</p></div>
+	<div style="text-align: center"><p>Let Tin (+39 351 9129282) know if there are any problems :)</p></div>
+	<div style="text-align: center"><p>Continuing the work of Red, we will miss you!</p></div>
 </body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
-		let daycycledays = ["1/12/2023","1/13/2023","1/16/2023","1/17/2023","1/18/2023","1/19/2023","1/20/2023","1/23/2023","1/24/2023","1/25/2023","1/26/2023","1/27/2023","1/30/2023","1/31/2023","2/1/2023","2/2/2023","2/3/2023","2/6/2023","2/7/2023","2/8/2023","2/9/2023","2/10/2023","2/13/2023","2/14/2023","2/15/2023","2/16/2023","2/17/2023","2/20/2023","2/21/2023","2/22/2023","2/23/2023","2/24/2023","3/6/2023","3/7/2023","3/8/2023","3/9/2023","3/10/2023","3/13/2023","3/14/2023","3/15/2023","3/16/2023","3/17/2023","3/20/2023","3/21/2023","3/22/2023","3/23/2023","3/24/2023","3/27/2023","3/28/2023","3/29/2023","3/30/2023","3/31/2023", "4/3/23","4/4/23","4/5/23","4/6/23","4/11/23","4/12/23","4/13/23","4/17/23","4/18/23","4/19/23","4/20/23","4/21/23","4/24/23","4/25/23","4/26/23","4/27/23","4/28/23","5/1/23","5/2/23","5/3/23","5/4/23","5/5/23","5/8/23","5/9/23","5/10/23","5/11/23","5/12/23","5/15/23","5/16/23","5/17/23","5/18/23"];
-		let starts = ['8:00','9:00','10:00','11:20','12:20'];
-		let ends = ['8:55','9:55','10:55','12:15','13:45'];
-		let header = ['Subject', 'Start Date', 'Start Time', 'End Date', 'End Time', 'All Day Event', 'Location'];
+		// for future maintenance, change daycyc-ledayss
+		const daycycledays = ["8/29/2023","8/30/2023","8/31/2023","9/1/2023","9/4/2023","9/5/2023","9/6/2023","9/7/2023","9/8/2023","9/11/2023","9/12/2023","9/13/2023","9/14/2023","9/15/2023","9/18/2023","9/19/2023","9/20/2023","9/22/2023","9/25/2023","9/26/2023","9/27/2023","9/28/2023","9/29/2023","10/2/2023","10/3/2023","10/4/2023","10/5/2023","10/6/2023","11/6/2023","11/7/2023","11/8/2023","11/9/2023","11/10/2023","11/13/2023","11/14/2023","11/15/2023","11/16/2023","11/17/2023","11/21/2023","11/22/2023","11/29/2023","11/30/2023","12/4/2023","12/7/2023","12/8/2023","12/11/2023","12/12/2023"];
+		const starts = ['8:00','9:00','10:00','11:20','12:20'];
+		const ends = ['8:55','9:55','10:55','12:15','13:45'];
+		const header = ['Subject', 'Start Date', 'Start Time', 'End Date', 'End Time', 'All Day Event', 'Location'];
 		let csv = header.join(',') + '\n';
 		let blockList = ['G', 'C', 'A', 'D', 'E', 'H', 'D', 'B', 'A', 'F'];
 		let block = {}
@@ -179,29 +159,24 @@
 			}
 
 			for(let i = 0; i < 10; i++){
-				block[subjs[i]] = blockList[i]
+				block[subjs[i]] = blockList[i];
 			}
 
-			let count = 2;
-			for(let i = 0; i < daycycledays.length; i++){
-				if(count == 9){
-					count = 1;
-				}
 
+			for(let i = 0; i < daycycledays.length; i++){
+				// for future maintenace, change (i+x) (x is number fitted to calendar)
+				let count = (i + 0) % 8 + 1;
+
+				// 5 is the number of blocks in a day
 				for(let subjcount = 0; subjcount < 5; subjcount++){
 					if(!subjs[(count - 1) * 5 + subjcount] == ""){
 						subjs_ind = (count - 1)*5 + subjcount;
-						// subj = subjs[subjs_ind] + ' [' + block[subjs[subjs_ind]] + ']';
 						subj = subjs[subjs_ind];
 						csv += [subj, daycycledays[i], starts[subjcount], daycycledays[i], ends[subjcount], false, ''].join(',');
 						csv += '\n';
-
 					}
 				}
-				count++;
 			}
-
-			// document.write(csv)
 
 			var hiddenElement = document.createElement('a');
 		    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
