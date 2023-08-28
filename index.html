@@ -11,19 +11,20 @@
  			margin:  0 auto;
  			text-align:  center;
  		}
- 		.row {
- 			justify-content:  center;
+ 		.row input {
+ 			width:  100%;
+ 		}
+ 		.row input::placeholder {
+ 			font-style: italic;
  		}
  		.rowHead {
- 			margin: 1em;
- 		}
- 		input {
- 			width:  100%;
+ 			margin-bottom: 0.5em;
  		}
  		.col-1 {
  			min-width: 10%;
  			overflow: clip;
- 			padding: 1%;
+ 			padding: 0 1%;
+ 			text-align: left;
  		}
  		.col-2 {
  			min-width: 20%;
@@ -36,8 +37,7 @@
  			justify-content:  center;
  			align-items:  center;
  		}
-
-/*		input:disabled {
+/*		input:{
 			color: #000;	
 		}*/
  	</style>
@@ -47,10 +47,14 @@
 	<br>
 	<h1 style="text-align: center">Hi, put your subjects here!</h1>
 	<div style="text-align: center"><p>The placeholder subjects there are mine as an example :)</p></div>
+	<div style="display: flex; width: 100%; justify-content: center;">
+		<label style="margin-right: 5px; margin-bottom: 0;">Manual filling</label>
+	 	<input id="manual-fill" type="checkbox">
+	</div>
 	<br>
 	<div class="table" id="timetable">
 		<div class="row rowHead">
-			<div class="col-2"></div>
+			<div class="col-2"> </div>
 			<div class="col-1">Day 1</div>
 			<div class="col-1">Day 2</div>
 			<div class="col-1">Day 3</div>
@@ -71,7 +75,7 @@
 			<div class="col-1 day7 block5"><input placeholder=""></div>
 			<div class="col-1 day8 block6"><input placeholder="WAC"></div>
 		</div>
-		<div class="row row2">
+		<div class="row row2 row-manual">
 			<div class="col-2 block"><p>Block 2 (9:00-9:55)</p></div>
 			<div class="col-1 day1 block3"><input disabled placeholder="Italian"></div>
 			<div class="col-1 day2 block4"><input disabled placeholder="Physics"></div>
@@ -82,7 +86,7 @@
 			<div class="col-1 day7 block1"><input disabled placeholder="Math"></div>
 			<div class="col-1 day8 block2"><input disabled placeholder="Biology"></div>
 		</div>
-		<div class="row row3">
+		<div class="row row3 row-manual">
 			<div class="col-2 block"><p>Block 3 (10:00-10:55)</p></div>
 			<div class="col-1 day1 block1"><input disabled placeholder="Math"></div>
 			<div class="col-1 day2 block2"><input disabled placeholder="Biology"></div>
@@ -93,7 +97,7 @@
 			<div class="col-1 day7 block7"><input disabled placeholder="English"></div>
 			<div class="col-1 day8 block8"><input disabled placeholder="TOK"></div>
 		</div>
-		<div class="row row4">
+		<div class="row row4 row-manual">
 			<div class="col-2 block"><p>Block 4 (11:20-12:15)</p></div>
 			<div class="col-1 day1 block4"><input disabled placeholder="Physics"></div>
 			<div class="col-1 day2 block1"><input disabled placeholder="Math"></div>
@@ -104,7 +108,7 @@
 			<div class="col-1 day7 block2"><input disabled placeholder="Biology"></div>
 			<div class="col-1 day8 block3"><input disabled placeholder="Italian"></div>
 		</div>
-		<div class="row row5">
+		<div class="row row5 row-manual">
 			<div class="col-2 block"><p>Block 5 (12:20-13:45)</p></div>
 			<div class="col-1 day1 block5"><input disabled placeholder=""></div>
 			<div class="col-1 day2 block6"><input disabled placeholder="WAC"></div>
@@ -147,8 +151,18 @@
 		const ends = ['8:55','9:55','10:55','12:15','13:45'];
 		const header = ['Subject', 'Start Date', 'Start Time', 'End Date', 'End Time', 'All Day Event', 'Location'];
 		let csv = header.join(',') + '\n';
-		let blockList = ['G', 'C', 'A', 'D', 'E', 'H', 'D', 'B', 'A', 'F'];
-		let block = {};
+		let manualFill = document.querySelector('#manual-fill');
+
+		manualFill.addEventListener('change', () => {
+			if (manualFill.checked)
+				document.querySelectorAll('.row .col-1 input').forEach((item) => {
+					item.disabled = false;
+				});
+			else	
+				document.querySelectorAll('.row-manual .col-1 input').forEach((item) => {
+					item.disabled = true;
+				});
+		})
 
 		for(let i = 1; i <= 8; i++) {
 			let subjectElement = document.querySelector('.row1 .block' + i);
@@ -156,6 +170,7 @@
 			let subjectBlock = Array.from(subjectElement.classList).filter(word => word.slice(0, -1) == "block")[0];
 			console.log(subjectBlock);
 			subjectInput.addEventListener("input", () => {
+				if (manualFill.checked) return;
 				let subject = document.querySelector('.row1 .block' + i + ' input').value;
 				document.querySelectorAll('.row .' + subjectBlock + ' input').forEach((item) => {
 					console.log(item);
@@ -172,10 +187,6 @@
 					let query = '.row' + j + ' .day' + i + ' input'
 					subjs.push(document.querySelector(query).value)
 				}
-			}
-
-			for(let i = 0; i < 10; i++){
-				block[subjs[i]] = blockList[i];
 			}
 
 
