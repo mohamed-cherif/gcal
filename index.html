@@ -5,11 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Calendar App</title>
  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #fff;
+      font-size: 1.05em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 10px #ADD8E6;
+    }
+
+    .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+  </style>
  	<style type="text/css">
+    body {
+      background-color: #111;
+      color: #fff;
+    }
  		.table {
  			width:  90%;
  			margin:  0 auto;
  			text-align:  center;
+      color: #fff;
  		}
  		.row input {
  			width:  100%;
@@ -45,6 +61,48 @@
 </head>
 <body>
 	<br>
+  <br>
+  <br>
+  <div id="snow-container">
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+      </div>
+    </div>
+  </div>
 	<h1 style="text-align: center">Hi, put your subjects here!</h1>
 	<div style="text-align: center"><p>The placeholder subjects there are mine as an example :)</p></div>
 	<div style="display: flex; width: 100%; justify-content: center;">
@@ -136,7 +194,7 @@
 	</div>
 		<br>
 		<!-- <div style="text-align: center"><p><b>For secondi: Don't forget to remove classes during trials!</b></p></div> -->
-		<div style="text-align: center"><p>The app is now updated till the end of term!</p></div>
+		<div style="text-align: center"><p>The app is now updated until summer break 2024!</p></div>
 	<div style="text-align: center"><p>Let Tín (+39 351 9129282) know if there are any problems :)</p></div>
 	<div style="text-align: center"><p>Continuing the work of Red, we will miss you!</p></div>
 </body>
@@ -144,7 +202,7 @@
 
 	<script type="text/javascript">
 		// for future maintenance, change daycyc-ledayss
-		const daycycledays = ["9/5/2023","9/6/2023","9/7/2023","9/8/2023","9/11/2023","9/12/2023","9/13/2023","9/14/2023","9/15/2023","9/18/2023","9/19/2023","9/20/2023","9/22/2023","9/25/2023","9/26/2023","9/27/2023","9/28/2023","9/29/2023","10/2/2023","10/3/2023","10/4/2023","10/5/2023","10/6/2023","10/9/2023","10/10/2023","10/11/2023","10/12/2023","10/13/2023","10/16/2023","10/18/2023","10/19/2023","10/20/2023","10/23/2023","10/24/2023","10/25/2023","10/26/2023","10/27/2023","11/6/2023","11/7/2023","11/8/2023","11/9/2023","11/10/2023","11/13/2023","11/14/2023","11/15/2023","11/16/2023","11/17/2023","11/21/2023","11/22/2023","11/23/2023","11/24/2023","11/27/2023","11/28/2023","11/29/2023","11/30/2023","12/1/2023","12/4/2023","12/5/2023","12/6/2023","12/7/2023","12/8/2023","12/11/2023","12/12/2023","12/13/2023","12/14/2023",];
+		const daycycledays = [ "08/01/2024", "09/01/2024", "10/01/2024", "11/01/2024", "12/01/2024", "15/01/2024", "16/01/2024", "17/01/2024", "18/01/2024", "19/01/2024", "22/01/2024", "23/01/2024", "24/01/2024", "25/01/2024", "26/01/2024", "29/01/2024", "30/01/2024", "31/01/2024", "01/02/2024", "02/02/2024", "05/02/2024", "06/02/2024", "07/02/2024", "08/02/2024", "09/02/2024", "12/02/2024", "13/02/2024", "14/02/2024", "15/02/2024", "16/02/2024", "19/02/2024", "20/02/2024", "21/02/2024", "22/02/2024", "23/02/2024", "04/03/2024", "05/03/2024", "06/03/2024", "07/03/2024", "11/03/2024", "12/03/2024", "13/03/2024", "14/03/2024", "15/03/2024", "18/03/2024", "19/03/2024", "20/03/2024", "21/03/2024", "22/03/2024", "25/03/2024", "26/03/2024", "27/03/2024", "28/03/2024", "02/04/2024", "03/04/2024", "04/04/2024", "05/04/2024", "08/04/2024", "09/04/2024", "10/04/2024", "11/04/2024", "12/04/2024", "15/04/2024", "16/04/2024", "17/04/2024", "18/04/2024", "19/04/2024", "22/04/2024", "23/04/2024", "24/04/2024", "26/04/2024", "29/04/2024", "30/04/2024", "01/05/2024"];
 		const starts = ['8:00','9:00','10:00','11:20','12:20'];
 		const ends = ['8:55','9:55','10:55','12:15','13:45'];
 		const header = ['Subject', 'Start Date', 'Start Time', 'End Date', 'End Time', 'All Day Event', 'Location'];
@@ -190,7 +248,8 @@
       // cycling the timetable
 			for(let i = 0; i < daycycledays.length; i++){
 				// for future maintenace, change (i+x) (x is number fitted to calendar)
-				let count = (i + 5) % 8 + 1;
+				let count = (i + 6) % 8 + 1;
+        // console.log(count, daycycledays[i])
 
 				// 5 is the number of blocks in a day
 				for(let subjcount = 0; subjcount < 5; subjcount++){
